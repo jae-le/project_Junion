@@ -421,7 +421,7 @@ main .themaSection ul.one .data:hover
 main .sectionB .themaCon .postThema .themaSection .one .data a
 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100px;
     width: 325px;
@@ -433,6 +433,9 @@ main .sectionB .themaCon .postThema .themaSection .one .data .number
 {
     font-size: var(--font-size24);
     margin-left: 0;
+    /* 순위 숫자 폭 고정 -> 행마다 회사명 시작 위치가 같아짐 */
+    flex: 0 0 24px;
+    text-align: center;
 }
 
 main .number
@@ -448,18 +451,27 @@ main .first-item .number
 main .sectionB .themaCon .postThema .themaSection .one .data .name
 {
     margin-left: 24px;
+    /* 남는 폭을 차지하되 내용이 길어도 D-day 를 밀어내지 않도록 */
+    flex: 1 1 auto;
+    min-width: 0;
 }
 main .sectionB .themaCon .postThema .themaSection .one .data .conSub
 {
     font-size: var(--font-size12);
     color: var(--color-black);
+    /* 긴 공고 제목은 한 줄로 자르고 … 표시 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 main .sectionB .themaCon .postThema .themaSection .one .data .conTitle
 {
-    margin-left: auto;
     font-size: var(--font-size20);
     color: var(--color-black);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 main .dDay
@@ -467,6 +479,10 @@ main .dDay
     margin-left: auto;
     font-size: var(--font-size20);
     color: var(--main-color);
+    /* "D-14" 가 두 줄로 쪼개지지 않도록 */
+    flex: 0 0 auto;
+    padding-left: 12px;
+    white-space: nowrap;
 }
 
 main .subBanner

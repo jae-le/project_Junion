@@ -850,7 +850,10 @@ font-weight: 200; */
 				// 24.08.12 하진 : 채용 공고에 기업이 회사 위치를 설정하지 않은 경우, 해당 태그 부분 숨김처리 로직 추가
 				var getlocation ="${company.com_location}";
 
-				if(getlocation){
+				if (getlocation && !(window.kakao && window.kakao.maps)) {
+					// 카카오 지도 SDK 로드 실패(앱 키 정지/도메인 미등록 등) 시 지도만 건너뛰고 아래 스크립트(기업 이미지 등)는 계속 실행
+					console.warn('Kakao Maps SDK not loaded - map skipped');
+				} else if(getlocation){
 				var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 					mapOption = {
 						center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표

@@ -261,6 +261,9 @@ section
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  /* 비율이 다른 사진도 찌그러지지 않게 잘라서 채움 */
+  object-fit: cover;
+  object-position: center top;
 }
 
 .imgController 

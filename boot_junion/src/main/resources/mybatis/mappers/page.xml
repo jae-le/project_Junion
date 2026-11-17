@@ -193,7 +193,7 @@
 	<!--  정렬 로직: 최신순, 마감임박순 리스트검색  -->
 	<sql id="orderByDate">
       <if test="(orderByDate == 'desc')">
-        order by ot.offer_num desc
+        order by ot.offer_no desc
       </if>
       <if test="(orderByDate == 'urgent')"> 
       	<![CDATA[

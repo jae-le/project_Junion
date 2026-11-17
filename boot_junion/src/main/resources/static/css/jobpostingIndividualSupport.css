@@ -228,9 +228,13 @@ display:inline-block;
 }
 .pplist .pp .uploadResult img
 {
-    width: 54px;
-    max-width: 54px;
+    /* 이력서 사진 비율(5:6)에 맞춘 크기. 비율이 다른 사진도 찌그러지지 않게 잘라서 채움 */
+    width: 60px;
+    max-width: 60px;
     height: 72px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 	/* border-radius: 50%; */
 	border-radius: 10px;
 }

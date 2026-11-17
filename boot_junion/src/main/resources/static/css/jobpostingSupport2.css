@@ -155,6 +155,9 @@ main .toptitle .toptitlehh
 	width: 64px;
 	height: 64px;
  	border-radius: 100px;
+	/* 원형 칸에 사진이 찌그러지지 않게 얼굴 쪽 기준으로 잘라서 채움 */
+	object-fit: cover;
+	object-position: center top;
 }
 
 
