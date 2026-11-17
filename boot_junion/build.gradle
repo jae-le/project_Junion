@@ -37,6 +37,11 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
+	// 내장 DB: 별도 설치 없이 bootRun 시 MariaDB가 함께 기동됨 (EmbeddedMariaDbConfig 참고)
+	implementation 'ch.vorburger.mariaDB4j:mariaDB4j-core:3.3.1'
+	runtimeOnly 'ch.vorburger.mariaDB4j:mariaDB4j-db-winx64:10.11.5-fix1'
+	runtimeOnly 'ch.vorburger.mariaDB4j:mariaDB4j-db-linux64:10.11.5'
+	runtimeOnly 'ch.vorburger.mariaDB4j:mariaDB4j-db-mac64:10.2.11'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'

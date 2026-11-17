@@ -1,0 +1,33 @@
+샘플 이미지 출처
+
+company*.jpg, sns*.jpg 와 notice*.jpg 의 배경은 Unsplash 사진(Lorem Picsum 경유)을 리사이즈한 것입니다.
+Unsplash License: 무료 사용 가능, 출처 표기 의무 없음 (https://unsplash.com/license)
+
+  company1  Luke Chesser        https://unsplash.com/photos/1uxV8fAfhVM
+  company2  Aleks Dorohovich    https://unsplash.com/photos/nJdwUHmaY8A
+  company3  Vadim Sherbakov     https://unsplash.com/photos/Hi9GSwWkCJk
+  company4  Oleg Chursin        https://unsplash.com/photos/IoCWq07GaG4
+  company5  Alexander Shustov   https://unsplash.com/photos/OxzhYtL-00Y
+  company6  Alejandro Escamilla https://unsplash.com/photos/cZhUxIQjILg
+  sns1  Alejandro Escamilla https://unsplash.com/photos/yC-Yzbqy7PY
+  sns2  Alejandro Escamilla https://unsplash.com/photos/Dl6jeyfihLk
+  sns3  Vadim Sherbakov     https://unsplash.com/photos/osSryggkso4
+  sns4  Alejandro Escamilla https://unsplash.com/photos/tAKXap853rY
+  sns5  Alejandro Escamilla https://unsplash.com/photos/LNRyGwIJr5c
+  sns6  Justin Leibow       https://unsplash.com/photos/ZJsseAxEcqM
+  sns7  Alejandro Escamilla https://unsplash.com/photos/BbQLHCpVUqA
+  sns8  Alejandro Escamilla https://unsplash.com/photos/ABDTiLqDhJA
+  sns10 Isaak Dury          https://unsplash.com/photos/YhZbnxqtooM
+  sns12 Nadir Balcikli      https://unsplash.com/photos/wE9nUW7tMmk
+
+notice*.jpg 는 해당 회사 사진 위에 공고 정보를 얹어 생성한 배너이고,
+user*.png / admin.png 는 이니셜로 생성한 아바타입니다.
+
+이력서 사진 resume*.jpg (Unsplash 인물 사진, 얼굴 기준 500x600 크롭)
+  사진 속 인물은 샘플 회원과 무관한 실존 인물입니다. 데모/개발 용도로만 사용하세요.
+  resume1  https://unsplash.com/photos/jIM8kVsFKlM
+  resume2  https://unsplash.com/photos/i5R8hbZFDdc
+  resume3  https://unsplash.com/photos/jGZITdFhmts
+  resume4  https://unsplash.com/photos/MZps6sz7CAE
+  resume5  https://unsplash.com/photos/ZoSb5J3jU28
+  resume6  https://unsplash.com/photos/ntLkvt6OZvQ

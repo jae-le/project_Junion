@@ -71,3 +71,33 @@ Server |![Apache Tomcat 9.0](https://img.shields.io/badge/Apache%20Tomcat%20-F8D
 Version Control | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)
 
 
+
+<hr/>
+
+## 실행 방법 (내장 DB)
+
+DB를 따로 설치하지 않아도 됩니다. 앱을 실행하면 **내장 MariaDB**(MariaDB4j)가 함께 뜨고, 처음 실행할 때 스키마와 샘플 데이터가 자동으로 들어갑니다.
+
+```bash
+cd boot_junion
+./gradlew bootRun        # Windows: gradlew.bat bootRun  (또는 IDE에서 BootJunionApplication 실행)
+```
+
+- 필요 조건: **JDK 17**
+- 접속: http://localhost:8282/main
+- 테스트 계정(비밀번호는 모두 `1234`)
+
+  | 구분 | 이메일 |
+  |---|---|
+  | 관리자(공지/약관 작성) | admin@admin.com |
+  | 개인회원 | user1@test.com, user2@test.com |
+  | 기업회원 | com1@test.com, com2@test.com |
+
+### 알아둘 점
+- 데이터는 `boot_junion/db-data/`에 저장되어 재시작해도 유지됩니다(git에는 올라가지 않음). **DB를 초기 상태로 되돌리려면** 앱을 끄고 이 폴더를 지운 뒤 다시 실행하세요.
+- 내장 DB 포트는 `13306`입니다. 다른 프로그램과 겹치면 `application.properties`의 `junion.embedded-db.port`와 `spring.datasource.url`의 포트를 함께 바꾸세요.
+- IDE에서 강제 종료하면 `db-data/base/bin/mysqld` 프로세스가 남을 수 있습니다. 다음 실행 때 그 프로세스를 그대로 재사용하므로 따로 처리할 필요는 없습니다. 다만 `db-data`를 지우려면 먼저 그 프로세스를 종료해야 합니다.
+- 스키마(`src/main/resources/db/schema.sql`)는 원본 DB 덤프가 없어서 **MyBatis 매퍼를 보고 역설계한 것**입니다. 컬럼 타입이나 기본값이 원본과 다를 수 있습니다.
+- 외부 MySQL(예: 팀 공용 DB)을 쓰려면 `junion.embedded-db.enabled=false`로 두고 `spring.datasource.url`을 그 DB로 바꾸세요.
+- 지원 OS: Windows x64, Linux x64, macOS(Intel). Apple Silicon Mac은 MariaDB4j가 제공하는 바이너리가 없어서 동작을 보장하지 않습니다.
+- 파일 업로드 경로는 코드에 `C:\devv\upload`로 고정되어 있습니다(업로드 기능을 쓸 때만 필요).
